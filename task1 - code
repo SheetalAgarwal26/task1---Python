@@ -1,0 +1,117 @@
+import pyttsx3
+import os
+
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[1].id) #changing index changes voices but ony 0 and 1 are working here
+engine.runAndWait()
+print("")
+print("")
+
+print("  ===============================================* Hello *==========================================================")
+engine.say('Hello')
+
+print("")
+
+print("\n\t 1.MICROSOFT WORD \t 2.MICROSOFT POWERPOINT \n\t 3.MICROSOFT EXCEL \t 4.GOOGLE CHROME \n\t 5.WHATSAPP     \t 6.PAINT \n\t 7.TEAMVIEWER \t         8.MICROSOFT EDGE \n\t 9.NOTEPAD        \t 10.PUTTY \n\n\t\t     0. FOR EXIT")
+
+print("\n  =============================================* Welcome *=========================================================")
+pyttsx3.speak("Welcome")
+print("")
+print("")
+
+pyttsx3.speak("I am your virtual assistent  ,  please enter your requirements")
+
+while True:
+	print("    Choose the option : "  , end='')
+	p = input()
+	p = p.upper()
+	print(p)
+	# os.system(p)
+
+	if ("DONT" in p)  or ("DON'T" in p) or ("NOT" in p) :
+	 pyttsx3.speak("Type Again")
+	 print(".")
+	 print(".")
+	 continue
+
+	elif ("GOOGLE" in p) or ("SEARCH" in p) or ("WEB BROWSER" in p)  or ("CHROME" in p) or ("BROWSER" in p) or ("4" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("GOOGLE CHROME")
+	 print(".")
+	 print(".")
+	 os.system("chrome")
+
+	elif ("IE" in p) or ("MSEDGE" in p) or ("EDGE" in p) or ("8" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("MICROSOFT EDGE")
+	 print(".")
+	 print   (".")
+	 os.system("msedge")
+	 
+	elif ("NOTE" in p) or ("NOTES" in p) or ("NOTEPAD" in p) or ("EDITOR" in p) or ("9" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("NOTEPAD")
+	 print(".")
+	 print(".")
+	 os.system("Notepad")
+ 	 
+	elif ("WHATSAPP" in p)  or ("WHATSAPP" in p) or ("WHATSAPP" in p) or ("5" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("WHATSAPP")
+	 print(".")
+	 print(".")
+	 os.system("start whatsapp")
+	 
+	elif ("PAINT" in p) or ("PAINT" in p) or ("6" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("PAINT")
+	 print(".")
+	 print(".")
+	 os.system("mspaint")
+	
+	elif ("TEAMVIEWER" in p) or ("TEAMVIEWER" in p) or ("TEAMVIEWER" in p) or ("7" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("TEAMVIEWER")
+	 print(".")
+	 print(".")
+	 os.system("teamviewer")
+	
+	elif ("PUTTY" in p) or ("PUTTY" in p) or ("10" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("PUTTY")
+	 print(".")
+	 print(".")
+	 os.system("putty")
+
+	elif ("EXCEL" in p) or ("MSEXCEL" in p) or ("SHEET" in p) or ("WINEXCEL" in p) or ("3" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("MICROSOFT EXCEL")
+	 print(".")
+	 print(".")
+	 os.system("start excel")
+
+	elif ("SLIDE" in p) or ("MSPOWERPOINT" in p) or ("PPT" in p) or ("POWERPNT" in p) or ("2" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("MICROSOFT POWERPOINT")
+	 print(".")
+	 print(".")
+	 os.system("start powerpnt")
+
+	elif ("WORD" in p) or ("MSWORD" in p) or ("1" in p) :
+	 pyttsx3.speak("Opening")
+	 pyttsx3.speak("MICROSOFT WORD")
+	 print(".")
+	 print(".")
+	 os.system("start wordpad")
+	
+	elif ("EXIT" in p)  or ("QUIT" in p) or ("CLOSE" in p) or ("0" in p) :
+	 pyttsx3.speak("Exiting")
+	 break
+
+	else:
+	 pyttsx3.speak(p)
+	 print("Is Invalid,Please Try Again")
+	 pyttsx3.speak("is Invalid,Please try again")
+	 print(".")
+	 print(".")
